@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    <style> 
+        *{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Josefin Sans', sans-serif;
+        }
+        .main_div{
+            width: 100%;position: relative;
+            height: 100vh;
+
+        }
+        .box{
+            width: 400px;
+            position:absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            padding: 50px;
+            background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+            border-radius: 10px;
+        }
+      .box h1{
+            margin-bottom: 30px;
+            text-align: center;
+            color: white;
+            text-transform: capitalize;
+        }
+        .box .inputbox{
+            position: relative;
+        }
+        .box .inputbox input{
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            color: white;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            border:none;
+            border-bottom: 1px solid white;
+            background: transparent;
+            outline: none;
+        }
+        .box .inputbox label{
+            position: absolute;
+            top:0;
+            left:0;
+            letter-spacing: 1px;
+            padding: 10px 0;
+            font-size: 16px;
+            color: white;
+            transition: 0.5s;
+        }
+        .box input[type="submit"]{
+            background: transparent; 
+            border:none;
+            outline: none;
+            color:white;
+            background: rgb(80, 83, 240);
+            padding: 10px 16px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+    .box .inputbox input:focus ~ label,
+    .box .inputbox input:valid ~ label{
+        top: -20px;
+        left: 0;
+        color:lightskyblue;
+        font-size: 12px;
+
+        }
+        </style>
+</head>
+<body>
+    <div class="main_div">
+        <div class="box">
+            <h1>Login Form</h1>
+            <form action="" method="">
+              <div class="inputbox" >
+               <input type="text" name="username" autocomplete="off" required>
+               <label for="">UserName</label>
+              </div>
+              <div class="inputbox" >
+                <input type="password" name="password" autocomplete="off" required>
+                <label for="">PassWord</label>
+               </div>
+               <input type="submit" value="login">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
